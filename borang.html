@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borang Pendaftaran Inventori</title>
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Borang Pendaftaran Inventori</h2>
+    
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="itemCode">Kod Item:</label>
+            <input type="text" id="itemCode" name="itemCode" required>
+        </div>
+
+        <div class="form-group">
+            <label for="itemName">Nama Item:</label>
+            <input type="text" id="itemName" name="itemName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Kategori:</label>
+            <select id="category" name="category" required>
+                <option value="">Sila Pilih</option>
+                <option value="elektronik">Elektronik</option>
+                <option value="perabot">Perabot</option>
+                <option value="alatan">Alatan</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Kuantiti:</label>
+            <input type="number" id="quantity" name="quantity" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Harga Unit (RM):</label>
+            <input type="number" id="price" name="price" min="0" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+            <label for="purchaseDate">Tarikh Pembelian:</label>
+            <input type="date" id="purchaseDate" name="purchaseDate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Lokasi:</label>
+            <input type="text" id="location" name="location" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Keterangan:</label>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Hantar</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
