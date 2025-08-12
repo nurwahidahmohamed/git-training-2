@@ -3,96 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Corporate Login</title>
     <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #f8f9fa;
+            --text-color: #202124;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2ff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
+
         .login-container {
+            display: flex;
             background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 300px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            width: 800px;
+            overflow: hidden;
         }
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
+
+        .login-branding {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d47a1 100%);
+            padding: 40px;
+            width: 40%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        .form-group {
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 50%;
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
         }
+
+        .login-form {
+            padding: 40px;
+            width: 60%;
+        }
+
+        h2 {
+            color: var(--text-color);
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
         input {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-            background-color: #f8f9fa;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            outline: none;
         }
+
+        input:focus {
+            border-color: var(--primary-color);
+        }
+
         .login-btn {
             width: 100%;
             padding: 12px;
-            background-color: #0052cc;
+            background-color: var(--primary-color);
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s;
         }
+
         .login-btn:hover {
-            background-color: #003d99;
+            background-color: #0d47a1;
         }
+
         .social-login {
+            margin-top: 24px;
             text-align: center;
-            margin-top: 20px;
         }
+
         .social-btn {
             padding: 10px 20px;
-            margin: 5px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            margin: 8px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
             background-color: white;
             cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 500;
         }
+
+        .social-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
         .signup-link {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 24px;
         }
+
         .signup-link a {
-            color: #0052cc;
+            color: var(--primary-color);
             text-decoration: none;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
     <div class="login-container">
-        <h2>Login Now</h2>
-        <form action="#" method="POST">
-            <div class="form-group">
-                <input type="email" placeholder="Email or Username" required>
-            </div>
-            <div class="form-group">
-                <input type="password" placeholder="Password" required>
-            </div>
-            <button type="submit" class="login-btn">LOGIN</button>
-        </form>
-
-        <div class="social-login">
-            <p>Or login with</p>
-            <button class="social-btn">Facebook</button>
-            <button class="social-btn">Google</button>
+        <div class="login-branding">
+            <div class="logo">LOGO</div>
+            <h2 style="color: white;">Welcome Back</h2>
+            <p>Log in to access your account</p>
         </div>
+        <div class="login-form">
+            <h2>Sign In</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <input type="email" placeholder="Email or Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
 
-        <div class="signup-link">
-            <p>Not a member? <a href="#">Sign up now</a></p>
+            <div class="social-login">
+                <p>Or continue with</p>
+                <button class="social-btn">
+                    <img src="https://img.icons8.com/color/20/000000/google-logo.png" alt="Google">
+                    Google
+                </button>
+                <button class="social-btn">
+                    <img src="https://img.icons8.com/color/20/000000/facebook-new.png" alt="Facebook">
+                    Facebook
+                </button>
+            </div>
+
+            <div class="signup-link">
+                <p>Don't have an account? <a href="#">Create Account</a></p>
+            </div>
         </div>
     </div>
 </body>
